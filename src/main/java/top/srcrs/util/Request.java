@@ -56,7 +56,7 @@ public class Request {
         httpGet.addHeader("connection", "keep-alive");
         httpGet.addHeader("Content-Type", "application/x-www-form-urlencoded");
         httpGet.addHeader("charset", "UTF-8");
-        httpGet.addHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36");
+        httpGet.addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0");
         httpGet.addHeader("Cookie", cookie.getCookie());
         HttpResponse resp = null;
         String respContent = null;
@@ -94,7 +94,7 @@ public class Request {
         httpPost.addHeader("Host", "tieba.baidu.com");
         httpPost.addHeader("Content-Type", "application/x-www-form-urlencoded");
         httpPost.addHeader("charset", "UTF-8");
-        httpPost.addHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36");
+        httpPost.addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0");
         httpPost.addHeader("Cookie", cookie.getCookie());
         httpPost.setEntity(entityBody);
         HttpResponse resp = null;
@@ -132,7 +132,7 @@ public class Request {
         request.addHeader("connection", "keep-alive");
         request.addHeader("Content-Type", "text/html; charset=UTF-8");
         request.addHeader("charset", "UTF-8");
-        request.addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57");
+        request.addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0");
 
         HttpResponse response = client.execute(request);
         BufferedReader rd = new BufferedReader(
