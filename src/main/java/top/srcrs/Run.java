@@ -204,39 +204,42 @@ public class Run {
      * @author srcrs
      * @Time 2020-10-31
      */
-    public void send(String sckey) {
+       /**
+     * 发送运行结果到微信，通过 server 酱
+     *
+     * @param sckey
+     * @author srcrs
+     * @Time 2020-10-31
+     */
+    /**   public void send(String sckey) {
+       
         String text = "总: " + followNum + " - ";
         text += "成功: " + success.size() + " 失败: " + (followNum - success.size());
         String desp = "共 " + followNum + " 贴吧\n\n";
         desp += "成功: " + success.size() + " 失败: " + (followNum - success.size());
-    
-        // 构建 POST 请求的参数
-        String body = "title=messagetitle&desp=" + URLEncoder.encode("TiebaSignIn运行结果\n\n" + desp, "UTF-8");
+        String body = "text=" + text + "&desp=" + "TiebaSignIn运行结果\n\n" + desp;
         StringEntity entityBody = new StringEntity(body, "UTF-8");
-        
         HttpClient client = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost("https://sctapi.ftqq.com/" + sckey + ".send");
+        HttpPost httpPost = new HttpPost("https://sc.ftqq.com/" + sckey + ".send");
         httpPost.addHeader("Content-Type", "application/x-www-form-urlencoded");
         httpPost.setEntity(entityBody);
-        
         HttpResponse resp = null;
         String respContent = null;
         try {
             resp = client.execute(httpPost);
-            HttpEntity entity = resp.getEntity();
-            respContent = EntityUtils.toString(entity, "UTF-8");
-    
+            HttpEntity entity = null;
             if (resp.getStatusLine().getStatusCode() < 400) {
-                LOGGER.info("server酱推送正常: " + respContent);
+                entity = resp.getEntity();
             } else {
-                LOGGER.error("server酱发送失败: " + respContent);
+                entity = resp.getEntity();
             }
+            respContent = EntityUtils.toString(entity, "UTF-8");
+            LOGGER.info("server酱推送正常");
         } catch (Exception e) {
             LOGGER.error("server酱发送失败 -- " + e);
         }
-    }
- 
-
+    } 
+**/
       /**
      * 发送运行结果到微信，通过 PUSHPLUS
      *
@@ -244,8 +247,8 @@ public class Run {
      * @author srcrs
      * @Time 2020-10-31
      */
-     /**public void send(String sckey) {
-        // 将要推送的数据
+     public void send(String sckey) {
+        /** 将要推送的数据 */
         String text = "总: " + followNum + " - ";
         text += "成功: " + success.size() + " 失败: " + (followNum - success.size());
         String desp = "共 " + followNum + " 贴吧\n\n";
@@ -277,4 +280,4 @@ try {
             e.printStackTrace();
         }
     }
-}*/
+}
