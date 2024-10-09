@@ -1,5 +1,5 @@
 <div align="center"> 
-<h1 align="center">贴吧签到助手（PushPlus版）</h1>
+<h1 align="center">贴吧签到助手</h1>
 <img src="https://img.shields.io/github/issues/srcrs/TiebaSignIn?color=green">
 <img src="https://img.shields.io/github/stars/srcrs/TiebaSignIn?color=yellow">
 <img src="https://img.shields.io/github/forks/srcrs/TiebaSignIn?color=orange">
@@ -47,13 +47,6 @@ BDUSS | xxxxxxxxxxx
 
 + 自己提交一次`push`。
 
-将`run.txt`中的`flag`由`0`改为`1`
-
-```patch
-- flag: 0
-+ flag: 1
-```
-
 ![](./assets/运行结果.gif)
 
 ## 成功了
@@ -62,7 +55,7 @@ BDUSS | xxxxxxxxxxx
 
 ## 添加PushPlus酱推送
 
-需在Secrets中添加PushPlus的`SCKEY`，格式如下
+需在Secrets中添加Server酱的`SCKEY`，格式如下
 
 Name | Value
 -|-
@@ -80,6 +73,7 @@ SCKEY | xxxxxxxxxx
 
 + 增加支持server酱推送，可以推送至微信
 
-## 2020-10-19
+## 2024-10-9
++ 代码维护
 
-~~增加支持多账户签到，每个账号的`BDUSS`使用`&&`分割，具体格式如下。~~
++  重新启用server酱
