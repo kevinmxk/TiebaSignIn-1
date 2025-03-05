@@ -203,6 +203,9 @@ public class Run {
      * @param sckey
      * @author srcrs
      * @Time 2020-10-31
+     * 
+     * 重新启用server酱
+     * @author kevin_mxk
      * @new_time  2024-09-28
      */
     public void send(String sckey) {
